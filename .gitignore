@@ -1,0 +1,7 @@
+/lib
+/bin
+/include
+.vscode
+pip-selfcheck.json
+__pycache__
+encrypt_file_class.py 
