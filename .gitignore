@@ -5,3 +5,5 @@
 pip-selfcheck.json
 __pycache__
 encrypt_file_class.py 
+backup_to_tg.timer
+backup_to_tg.service
