@@ -63,8 +63,7 @@ class zip_arch:
             
 
 if __name__ == '__main__':
-    #src = '/home/user/Documents'
-    src = '/home/shedar/Documents/BicycleProof'
+    src = '/home/user/Documents'    
     dst = f'{src}.zip'
 
     # включить только файлы с расширение *.txt и *.odt
