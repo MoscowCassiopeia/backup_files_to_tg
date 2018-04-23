@@ -20,6 +20,7 @@ def main():
     send_obj = send_file_class.send_fl_tg(chat_ids=cfg_dict['chat_ids'],
                                           token_bot=cfg_dict['token_bot'],
                                           proxy_url=cfg_dict['proxy_url'])
+    logging.info(f'proxy_url={cfg_dict["proxy_url"]}')
     
 
     for i, file in enumerate(cfg_dict['files']):
@@ -54,7 +55,7 @@ def main():
                     # флаг означающий что конфиг нужно перезаписать новыми данными                                         
                     is_change = True
                 except Exception as e:
-                    logging.info(f'Error send file:{dst}')
+                    logging.error(f'Error send file:{e}')		    
                 else:
                     # Удаляем отправленный файл
                     logging.info(f'File {dst} send to tg')
@@ -84,7 +85,7 @@ def main():
                         # флаг означающий что конфиг нужно перезаписать новыми данными                                         
                         is_change = True
                     except Exception as e:
-                        logging.info(f'Error send file:{file["path"]}')
+                        logging.error(f'Error send file:{e}')
                     else:
                         # Удаляем отправленный файл
                         os.remove(f'{file["path"]}.zip')

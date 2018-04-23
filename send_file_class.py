@@ -11,7 +11,8 @@ class send_fl_tg:
     def __init__(self, chat_ids, token_bot, proxy_url=False):
         self.chat_ids = chat_ids
         if proxy_url:
-            self.bot = bot.Bot(token = token_bot, request=proxy_url)
+            proxy = Request(proxy_url=proxy_url, con_pool_size=32)
+            self.bot = bot.Bot(token = token_bot, request=proxy)
         else:            
             self.bot = bot.Bot(token = token_bot)
     
