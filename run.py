@@ -18,7 +18,8 @@ def main():
 
     hash_obg = hash_class.hash_fl()
     send_obj = send_file_class.send_fl_tg(chat_ids=cfg_dict['chat_ids'],
-                                          token_bot=cfg_dict['token_bot'])
+                                          token_bot=cfg_dict['token_bot'],
+                                          proxy_url=cfg_dict['proxy_url'])
     
 
     for i, file in enumerate(cfg_dict['files']):
