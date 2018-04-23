@@ -63,13 +63,12 @@ class zip_arch:
             
 
 if __name__ == '__main__':
-    #src = '/home/user/Documents'
-    src = '/home/shedar/Documents/BicycleProof'
+    src = '/home/user/Documents'    
     dst = f'{src}.zip'
 
     # включить только файлы с расширение *.txt и *.odt
     # тип компрессии ZIP_LZMA, по умолчанию ZIP_DEFLATED
-    zip_obj = zip_arch(include='.*txt$|.*odt$', compress_type=zipfile.ZIP_LZMA)    
+    zip_obj = zip_arch(include='.*txt$|.*odt$', compress_type=ZIP_LZMA)    
     zip_obj.compress(src, dst)
   
 
